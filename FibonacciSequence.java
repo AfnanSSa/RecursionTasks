@@ -1,6 +1,8 @@
 /* Fibonacci Sequence
  * Objective:
- * Develop a Java program capable of calculating the nth Fibonacci number. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.
+ * Develop a Java program capable of calculating the nth Fibonacci number. The Fibonacci
+ * sequence is a series of numbers where each number is the sum of the two preceding ones,
+ * usually starting with 0 and 1.
  * Requirements:
  * The program should use recursion to calculate the nth Fibonacci number.
  * The first two numbers in the Fibonacci sequence are 0 and 1, respectively.
@@ -20,11 +22,14 @@ public class RecursionTasks {
         try{
             System.out.println("\nEnter a number: "); //prompting user to enter a number
             Integer input = scanner.nextInt(); //getting input
-            if (input < 0){
-                System.out.println("\nEnter a positive number."); //if input is a number less than 1
+            if (input <= 0){
+                System.out.println("\nEnter a positive number."); //if input is a negative value
             } else {
-                //if input is 1 or more
-                System.out.println(input + "th number in Fibonacci Sequence is: " + fibonacciSequence(input));
+                System.out.println("Fibonacci Sequence of " + input + " value(s):");
+                //printing sequence
+                for (Integer i = 0; i < input; i++){
+                    System.out.print(fibonacciSequence(i) + " ");
+                }
             }
         } catch (InputMismatchException exception){
             System.out.println("\nEnter an integer."); //if input is not an integer
