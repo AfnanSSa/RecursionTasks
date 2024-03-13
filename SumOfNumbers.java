@@ -32,7 +32,7 @@ public class RecursionTasks {
 
     }
 
-    //method to reverse the input
+    //method to sum the numbers 
     public static Integer sumOfNumbers(Integer input) {
         if (input > 1){
             return input + sumOfNumbers(input- 1);
